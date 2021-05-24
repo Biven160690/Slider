@@ -1,0 +1,28 @@
+{
+  "name": "scroll",
+  "version": "1.0.0",
+  "description": "test",
+  "main": "script.js",
+  "private": true,
+  "scripts": {
+    "dev": "webpack --mode development",
+    "build": "webpack --mode production",
+    "watch": "webpack --mode development --watch",
+    "start": "webpack serve --mode development  --open "
+  },
+  "author": "Sergey Mamonko",
+  "license": "ISC",
+  "devDependencies": {
+    "css-loader": "^5.2.5",
+    "html-webpack-plugin": "^5.3.1",
+    "npm-install-webpack-plugin": "^4.0.5",
+    "style-loader": "^2.0.0",
+    "webpack": "^5.37.1",
+    "webpack-cli": "^4.7.0",
+    "webpack-dev-server": "^3.11.2"
+  },
+  "dependencies": {
+    "strip": "^3.0.0",
+    "strip-ansi": "^3.0.1"
+  }
+}
