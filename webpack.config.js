@@ -9,8 +9,8 @@ module.exports = {
     path: path.resolve(__dirname, "dist"),
   },
   devServer: {
-    host: "127.0.0.1",
-    // host: "0.0.0.0", --- for docker 
+    // host: "127.0.0.1",
+    host: "0.0.0.0",
     port: 3000,
   },
   resolve: {
