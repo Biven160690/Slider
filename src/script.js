@@ -3,6 +3,7 @@ import "./style/style";
 let [img, elementSlides, startTouch, startDown] = [null],
 allSlides = document.querySelector(".slides"),
 addStyle,
+numb = 1,
 i = 0;
 window.onload = async  function (){
     let response = await fetch ("https://rickandmortyapi.com/api/character/1,2,3,4,5,6,7,8,9,10")
@@ -30,6 +31,9 @@ function next() {
   elementSlides[i - 1].classList.remove("block") | addStyle()
 };
 
+function deletListener(del = 2){
+  del === 1 ? allSlides.removeEventListener("mouseup", scroll) : allSlides.removeEventListener("touchend", scroll);
+}
 
 function touches(e) {
   let touch = e.changedTouches;
@@ -49,6 +53,7 @@ allSlides.addEventListener("touchstart",function (e){
 allSlides.addEventListener("touchend",function (e) {
   let endTouch = touches(e);
     scroll (startTouch,endTouch)
+    deletListener(numb)
   },false);
 
 allSlides.addEventListener("mousedown", function (e) {
@@ -60,6 +65,7 @@ allSlides.addEventListener("mouseup", function (e) {
   let endUp = e.clientX;
     scroll (startDown,endUp)
     allSlides.classList.remove('slides_grabbing')
+    deletListener()
   },false);
   
 
