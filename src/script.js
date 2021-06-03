@@ -13,7 +13,7 @@ window.onload = async  function (){
       img.src = characterTwo[i].image;
       img.alt = "image";
       allSlides.append(img);
-      elementSlides = document.querySelectorAll("img");
+      elementSlides = document.getElementsByTagName("img");
       elementSlides[0].classList = 'block';
     }
       };
